@@ -1,0 +1,14 @@
+# The 22-edit core suite of the paper's TrustMark variant comparison and the first reference
+# runs (2026-09-30): codec, metadata, geometric, screenshot, color and chain families. `core`
+# later grew the enhance/filter/draw/overlay/removal families for C2PA action coverage; this
+# file pins the historical list. Runs made before the split record the suite name `core`;
+# reproduce them with `--suite core22`.
+name: core22
+transforms:
+  [identity,
+   png_reencode, jpeg_q90, jpeg_q75, jpeg_q50, webp_q80, avif_q60,
+   strip_metadata, carry_manifest_edit,
+   resize_0.5, resize_0.25, crop_5, crop_20, reframe_4x5, rotate_90, flip_h,
+   screenshot,
+   exposure_+0.5ev, saturation_1.3, lut_film, color_transfer,
+   export_edit, share_small]

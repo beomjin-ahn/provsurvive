@@ -1,0 +1,9 @@
+# Reference suite: core + generative edits (GPU).
+name: full
+include: core
+transforms:
+  - inpaint_10
+  - inpaint_30
+  - inpaint_30_raw
+  - img2img_0.2
+  - img2img_0.4

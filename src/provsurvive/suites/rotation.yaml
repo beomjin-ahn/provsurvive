@@ -1,0 +1,8 @@
+# Decoder-configuration check: run with --rotation-search to see what a
+# diligent verifier recovers after rotation; identity guards against regressions.
+name: rotation
+transforms:
+  - identity
+  - rotate_90
+  - flip_h
+  - jpeg_q75

@@ -1,0 +1,10 @@
+# One parameter per family, for robustness-vs-quality curves.
+name: sweep
+transforms:
+  [identity,
+   jpeg_q95, jpeg_q85, jpeg_q80, jpeg_q70, jpeg_q60, jpeg_q40, jpeg_q30,
+   resize_0.9, resize_0.75, resize_0.35, resize_0.2,
+   crop_10, crop_30, crop_40,
+   exposure_-1.5ev, exposure_-1ev, exposure_-0.5ev, exposure_-0.25ev, exposure_+0.25ev, exposure_+1ev, exposure_+1.5ev,
+   inpaint_5, inpaint_20, inpaint_40, inpaint_50,
+   img2img_0.05, img2img_0.1, img2img_0.3, img2img_0.6]

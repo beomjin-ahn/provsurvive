@@ -1,0 +1,11 @@
+# Second inpainting editor (FLUX.2-klein-4B) on the same masks as the Z-Image inpaints:
+# a paired comparison of editors.
+name: editors_klein
+transforms:
+  - identity
+  - inpaint_5
+  - inpaint_10
+  - inpaint_20
+  - inpaint_klein_5
+  - inpaint_klein_10
+  - inpaint_klein_20

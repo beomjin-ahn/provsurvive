@@ -1,0 +1,6 @@
+# Seed replicate of the headline generative results (run with a different --seed).
+name: replicate
+transforms:
+  - identity
+  - inpaint_10
+  - inpaint_30

@@ -1,0 +1,17 @@
+# Quickstart suite: CPU only, runs in about a minute on procedural images.
+name: quick
+transforms:
+  - identity
+  - png_reencode
+  - strip_metadata
+  - carry_manifest_edit
+  - jpeg_q90
+  - jpeg_q75
+  - jpeg_q50
+  - webp_q80
+  - avif_q60
+  - resize_0.5
+  - crop_20
+  - rotate_90
+  - flip_h
+  - exposure_+0.5ev

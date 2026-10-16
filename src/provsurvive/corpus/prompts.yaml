@@ -1,0 +1,126 @@
+# Prompts for the generated half of the corpus, by category. Image i (in file order) is
+# gen-<i:03d>, made by generator i mod 2 (in the order below) at size i mod 3 of 1024x1024,
+# 1216x832 and 832x1216, with seed 1000 + i.
+generators:
+  zimage-turbo:
+    repo: Tongyi-MAI/Z-Image-Turbo
+    revision: f332072aa78be7aecdf3ee76d5c247082da564a6
+    license: apache-2.0
+    steps: 9
+    guidance_scale: 0.0
+  flux2-klein-4b:
+    repo: black-forest-labs/FLUX.2-klein-4B
+    revision: e7b7dc27f91deacad38e78976d1f2b499d76a294
+    license: apache-2.0
+    steps: 4
+    guidance_scale: 1.0
+prompts:
+  people:
+  - portrait of an elderly fisherman with a weathered face, overcast light, 85mm photo
+  - a young woman reading on a train by the window, morning light, candid photo
+  - two children laughing while running through a sprinkler in a backyard, summer
+  - a chef plating a dish in a busy restaurant kitchen, motion, warm tungsten light
+  - group of friends taking a selfie on a rooftop at sunset
+  - a street musician playing saxophone under a bridge, evening, shallow depth of field
+  - close-up portrait of a woman with freckles and red hair, natural window light
+  - an old man playing chess in a park, autumn leaves, documentary photo
+  - a nurse walking through a hospital corridor, fluorescent light, candid
+  - a cyclist in rain gear crossing a wet city intersection at night
+  - a grandmother teaching her grandson to knit on a sofa, cozy interior
+  - a construction worker on scaffolding against a blue sky
+  urban:
+  - a narrow alley with hanging lanterns and wet cobblestones after rain, night
+  - a busy crosswalk seen from above, people and taxis, midday
+  - a subway platform with a train arriving, motion blur, fluorescent lighting
+  - a row of colorful houses along a canal, reflections in the water
+  - a gas station at night with neon lights, empty road, cinematic
+  - a small corner cafe with outdoor seating, morning, european city
+  - a parking garage interior with concrete pillars, harsh overhead light
+  - a skyline at blue hour with lit office windows
+  - a laundromat interior with rows of washing machines, late night
+  - an old bookstore storefront with a hand-painted sign, overcast day
+  - a highway interchange from a drone, long exposure light trails
+  - a market street in a tropical city, fruit stalls, bright sunlight
+  nature:
+  - a misty pine forest at dawn with sun rays through the trees
+  - a mountain lake with perfect reflection of snowy peaks
+  - desert sand dunes with long shadows at sunset
+  - a rocky coastline with crashing waves, overcast, long exposure
+  - a field of sunflowers under a stormy sky
+  - a waterfall in a lush green gorge, moss covered rocks
+  - autumn trees along a winding country road, golden light
+  - a frozen lake with cracks in the ice and a distant cabin
+  - rolling green hills with scattered sheep, soft morning fog
+  - a coral reef with tropical fish, underwater photo
+  - a starry night sky over a desert with the milky way
+  - a close-up of dew drops on a spider web in the morning
+  food_products:
+  - a bowl of ramen with a soft boiled egg, top-down food photography
+  - fresh bread loaves on a wooden table, flour dust, rustic
+  - a cup of latte with latte art on a marble counter
+  - a flat lay of colorful spices in small bowls
+  - a pair of worn leather boots on a wooden floor, product photo
+  - a wristwatch on a dark background with dramatic lighting, product shot
+  - a stack of pancakes with berries and syrup, morning light
+  - assorted sushi on a slate plate, studio lighting
+  - a glass bottle of olive oil with olives and rosemary, soft light
+  - a farmers market crate of heirloom tomatoes, overhead
+  - a pair of headphones on a desk, clean studio product photo
+  - a slice of chocolate cake on a plate with a fork, bakery window light
+  interiors:
+  - a minimalist living room with large windows and a green plant
+  - a cluttered artist studio with paint tubes and canvases
+  - a hotel bedroom with warm lamps and a view of the city at night
+  - a library reading room with tall shelves and green lamps
+  - a kitchen with copper pots and morning sunlight
+  - a home office desk with a laptop, notebook and coffee mug
+  - an empty classroom with wooden desks and a chalkboard
+  - a greenhouse full of tropical plants, humid, diffuse light
+  - a vintage barber shop interior with leather chairs
+  - a museum gallery with paintings and a wooden bench
+  - a bathroom with white tiles and a clawfoot tub, soft daylight
+  - a garage workshop with tools on a pegboard
+  animals:
+  - a golden retriever catching a frisbee in a park
+  - a red fox in fresh snow, telephoto wildlife photo
+  - a cat sleeping in a sunbeam on a windowsill
+  - a flock of flamingos standing in shallow water
+  - a close-up of a chameleon on a branch, macro
+  - a horse galloping on a beach at sunrise
+  - an owl perched on a branch at dusk
+  - a herd of elephants crossing a dusty savanna
+  - a hummingbird feeding from a red flower, frozen motion
+  - a school of sardines swirling underwater
+  - a pair of ducks on a pond with lily pads
+  - a tabby kitten playing with a ball of yarn
+  text_signage:
+  - a vintage diner sign that says OPEN 24 HOURS glowing at night
+  - a chalkboard menu outside a cafe listing coffee prices
+  - a street sign at an intersection named Maple Avenue and 5th Street
+  - a bookshelf with readable book spines, warm light
+  - a handwritten grocery list on a sticky note on a fridge
+  - a train station departure board with destinations and times
+  - a neon sign in a shop window that says RECORDS
+  illustration:
+  - flat vector illustration of a city park with people walking dogs
+  - watercolor painting of a harbor with sailboats
+  - isometric illustration of a small office with computers
+  - children's book illustration of a bear having a picnic
+  - oil painting of a still life with fruit and a jug
+  - anime style scene of a girl on a bicycle by the sea
+  - pixel art of a fantasy village at night
+  - minimal poster design with geometric shapes and bold colors
+  - pencil sketch of an old cathedral facade
+  - 3d render of a cute robot in a toy store
+  texture_macro:
+  - macro photo of tree bark texture with lichen
+  - close-up of woven fabric with colorful threads
+  - rusty metal surface with peeling blue paint
+  - a gravel path texture seen from above
+  - close-up of a butterfly wing scales, macro
+  - a pile of autumn leaves filling the frame
+  - frosted glass window with water droplets and blurred lights behind
+  - a brick wall with graffiti, harsh midday light
+  - close-up of a peacock feather
+  - ripples on sand at low tide, top-down
+  - a stack of old newspapers, shallow depth of field

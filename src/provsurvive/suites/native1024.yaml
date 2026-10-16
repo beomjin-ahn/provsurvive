@@ -1,0 +1,10 @@
+# Photos edited at their native resolution: run on the photographs resized to a 1024-px long
+# side, so the working resolution equals the master size and nothing is resized twice.
+name: native1024
+transforms:
+  - identity
+  - inpaint_5
+  - inpaint_10
+  - inpaint_20
+  - img2img_0.05
+  - img2img_0.1

@@ -1,0 +1,11 @@
+# Matched-area crops: is a crop's loss caused by the area removed or by the aspect-ratio change?
+# 2x2 (area 20% / 50%) x (aspect kept / changed 1.25x), plus 50% with a 2x aspect change.
+name: crop2x2
+transforms:
+  - identity
+  - crop_ap_20
+  - crop_ap_50
+  - crop_ar125_20
+  - crop_ar125_50
+  - crop_ar2_50
+  - reframe_4x5

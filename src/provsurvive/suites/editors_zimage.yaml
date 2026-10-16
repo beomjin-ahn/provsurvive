@@ -1,0 +1,8 @@
+# Generative confound controls with the reference editor: one neutral prompt for
+# every master, and a VAE-only round trip. Run separately from editors_klein (GPU memory).
+name: editors_zimage
+transforms:
+  - identity
+  - inpaint_10
+  - inpaint_10_neutral
+  - vae_roundtrip

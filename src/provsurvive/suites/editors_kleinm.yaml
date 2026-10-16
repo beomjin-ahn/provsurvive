@@ -1,0 +1,9 @@
+# Second inpainting editor with the masked region grayed out in its input. The Klein inpainting
+# pipeline conditions on the full input image, so editors_klein measures a near-identical
+# re-rendering; this suite measures content replacement on the same masks.
+name: editors_kleinm
+transforms:
+  - identity
+  - inpaint_kleinm_5
+  - inpaint_kleinm_10
+  - inpaint_kleinm_20
