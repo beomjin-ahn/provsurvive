@@ -38,7 +38,7 @@ class TrustMarkBinding:
         device: str = "",
     ) -> None:
         if variant not in _REGISTERED:
-            raise ValueError(f"TrustMark variant {variant!r} is not in the C2PA registry")
+            raise ValueError(f"TrustMark variant {variant!r}: use Q, C or P")
         self.variant = variant
         self.encoding = encoding
         self.strength = strength

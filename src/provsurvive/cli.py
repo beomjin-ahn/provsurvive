@@ -97,7 +97,7 @@ def run(
     binding: str = typer.Option(
         "trustmark", help="Soft binding plugin: trustmark | pixelseal | iscc."
     ),
-    variant: str = typer.Option("Q", help="TrustMark variant (registered: Q, C, P)."),
+    variant: str = typer.Option("Q", help="TrustMark variant: Q, C or P."),
     rotation_search: bool = typer.Option(False, help="Decode with TrustMark ROTATION=True."),
     controls_gpu: bool = typer.Option(False, help="Also run generative transforms on controls."),
 ) -> None:
@@ -242,7 +242,7 @@ def prepare(
     images: Path = _folder("Folder of your images (or a corpus with index.json)."),
     out: Path = typer.Option(..., help="Case directory to create."),
     binding: str = typer.Option("trustmark", help="Soft binding: trustmark | iscc | pixelseal."),
-    variant: str = typer.Option("Q", help="TrustMark variant (registered: Q, C, P)."),
+    variant: str = typer.Option("Q", help="TrustMark variant: Q, C or P."),
     kind: str = typer.Option(
         "photo",
         help="Test claim signed into the masters: photo (digitalCapture) | generated "

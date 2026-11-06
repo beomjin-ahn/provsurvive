@@ -2,8 +2,9 @@
 file it points to.
 
 The record (``benchmarkingInformation`` under a registry entry's ``entryMetadata``) has four
-fields: a description, the covered media types, the benchmark date, and the URL and SHA-256
-digest of a results file. What the results file contains is left open.
+fields: a description, the covered media types, the benchmark date, and the URL of a results file
+with its digest (``alg`` and hexadecimal ``hash``, as in C2PA hashed URIs). What the results file
+contains is left open.
 
 ``benchmark-results.json`` is that file for a run: the numbers a registry reader needs, namely
 recovery per edit family with image-clustered intervals, the disclosure-inconsistency rate after
@@ -232,7 +233,8 @@ def build_record(results: dict, url: str | None = None) -> list[dict]:
             "benchmarkDate": run_id[:10],
             "results": {
                 "url": results_url(run_id, url),
-                "sha256": hashlib.sha256(results_bytes(results)).hexdigest(),
+                "alg": "sha256",
+                "hash": hashlib.sha256(results_bytes(results)).hexdigest(),
             },
         }
     ]

@@ -152,9 +152,11 @@ REGISTRY_BENCHMARKING_INFORMATION = {
                 "type": "object",
                 "properties": {
                     "url": {"type": "string", "format": "uri"},
-                    "sha256": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"},
+                    "alg": {"enum": ["sha256", "sha384", "sha512"]},
+                    "hash": {"type": "string", "pattern": "^[A-Fa-f0-9]+$"},
                 },
-                "required": ["url", "sha256"],
+                "dependentRequired": {"alg": ["hash"], "hash": ["alg"]},
+                "required": ["url"],
             },
         },
         "required": ["description", "coveredMediaTypes", "benchmarkDate", "results"],
@@ -172,11 +174,12 @@ def test_reports_render(run_dir):
     assert results["controls"]["false_detection_deployed_schema_cells"] is not None
     item = benchinfo.build_record(results)[0]
     assert set(item) == {"description", "coveredMediaTypes", "benchmarkDate", "results"}
-    assert item["results"]["sha256"] == hashlib.sha256(benchinfo.results_bytes(results)).hexdigest()
+    digest = hashlib.sha256(benchinfo.results_bytes(results)).hexdigest()
+    assert item["results"]["alg"] == "sha256" and item["results"]["hash"] == digest
     assert item["results"]["url"].startswith("urn:provsurvive:run:")
     benchinfo.write(run_dir)
     written = (run_dir / benchinfo.RESULTS_FILE).read_bytes()
-    assert hashlib.sha256(written).hexdigest() == item["results"]["sha256"]
+    assert hashlib.sha256(written).hexdigest() == item["results"]["hash"]
     jsonschema = pytest.importorskip("jsonschema")
     jsonschema.validate(
         json.loads((run_dir / benchinfo.RECORD_FILE).read_text()), REGISTRY_BENCHMARKING_INFORMATION

@@ -147,6 +147,17 @@ runs/<run_id>/
 - Everyday edits, not attacks: adversarial removal and forgery are out of scope.
 - In `run`, photographs are signed as camera captures, so that whether recovered provenance still describes an edited photograph can be measured.
 
+## Citation
+
+```bibtex
+@inproceedings{ahn2027provsurvive,
+  title     = {{ProvSurvive}: Benchmarking {C2PA} Provenance under Everyday and Generative Image Edits},
+  author    = {Ahn, Beomjin},
+  booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshops},
+  year      = {2027}
+}
+```
+
 ## License
 
 MIT.
